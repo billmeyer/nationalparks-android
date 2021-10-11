@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/image_view_item_nationalpark"
+        android:layout_width="@dimen/item_transform_image_length"
+        android:layout_height="@dimen/item_transform_image_length"
+        android:layout_margin="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/text_view_item_nationalpark_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/text_view_item_nationalpark_address"
+        app:layout_constraintStart_toEndOf="@id/image_view_item_nationalpark"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Adams National Historical Park" />
+
+    <TextView
+        android:id="@+id/text_view_item_nationalpark_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        app:layout_constraintStart_toEndOf="@id/image_view_item_nationalpark"
+        app:layout_constraintTop_toTopOf="@id/text_view_item_nationalpark_name"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:text="135 Adams Street, Quincy, MA 02169" />
+</androidx.constraintlayout.widget.ConstraintLayout>
