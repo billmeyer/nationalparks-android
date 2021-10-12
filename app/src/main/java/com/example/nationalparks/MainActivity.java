@@ -35,7 +35,8 @@ public class MainActivity extends AppCompatActivity {
         NavigationView navigationView = binding.navView;
         if (navigationView != null) {
             mAppBarConfiguration = new AppBarConfiguration.Builder(
-                    R.id.nav_transform, R.id.nav_reflow, R.id.nav_slideshow, R.id.nav_settings)
+//                    R.id.nav_transform, R.id.nav_healthcheck, R.id.nav_slideshow, R.id.nav_settings)
+                    R.id.nav_healthcheck, R.id.nav_nationalparks, R.id.nav_settings)
                     .setOpenableLayout(binding.drawerLayout)
                     .build();
             NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
@@ -45,7 +46,8 @@ public class MainActivity extends AppCompatActivity {
         BottomNavigationView bottomNavigationView = binding.appBarMain.contentMain.bottomNavView;
         if (bottomNavigationView != null) {
             mAppBarConfiguration = new AppBarConfiguration.Builder(
-                    R.id.nav_transform, R.id.nav_reflow, R.id.nav_slideshow)
+//                    R.id.nav_transform, R.id.nav_healthcheck, R.id.nav_slideshow)
+                    R.id.nav_healthcheck, R.id.nav_nationalparks, R.id.nav_settings)
                     .build();
             NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
             NavigationUI.setupWithNavController(bottomNavigationView, navController);

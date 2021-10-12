@@ -19,6 +19,12 @@
         <entry key="../../../../../Volumes/Duo1/github/billmeyer/MyApplication/app/src/main/res/menu/bottom_navigation.xml" value="0.4639455782312925" />
         <entry key="../../../../../Volumes/Duo1/github/billmeyer/MyApplication/app/src/main/res/menu/navigation_drawer.xml" value="0.29384615384615387" />
         <entry key="../../../../../Volumes/Duo1/github/billmeyer/MyApplication/app/src/main/res/menu/overflow.xml" value="0.2984375" />
+        <entry key="app/src/main/res/layout-w1240dp/content_main.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.15374873353596757" />
+        <entry key="app/src/main/res/layout/content_main.xml" value="0.15374873353596757" />
+        <entry key="app/src/main/res/layout/nav_header_main.xml" value="0.15374873353596757" />
+        <entry key="app/src/main/res/menu/bottom_navigation.xml" value="0.21041666666666667" />
+        <entry key="app/src/main/res/menu/navigation_drawer.xml" value="0.21041666666666667" />
       </map>
     </option>
   </component>

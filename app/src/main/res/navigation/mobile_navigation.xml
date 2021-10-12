@@ -3,7 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_transform">
+    app:startDestination="@+id/nav_healthcheck">
+
+    <fragment
+        android:id="@+id/nav_healthcheck"
+        android:name="com.example.nationalparks.ui.healthcheck.HealthCheckFragment"
+        android:label="@string/menu_healthcheck"
+        tools:layout="@layout/fragment_healthcheck" />
 
     <fragment
         android:id="@+id/nav_nationalparks"
@@ -11,27 +17,21 @@
         android:label="@string/menu_nationalparks"
         tools:layout="@layout/fragment_nationalparks" />
 
-    <fragment
-        android:id="@+id/nav_transform"
-        android:name="com.example.nationalparks.ui.transform.TransformFragment"
-        android:label="@string/menu_transform"
-        tools:layout="@layout/fragment_transform" />
+<!--    <fragment-->
+<!--        android:id="@+id/nav_transform"-->
+<!--        android:name="com.example.nationalparks.ui.transform.TransformFragment"-->
+<!--        android:label="@string/menu_transform"-->
+<!--        tools:layout="@layout/fragment_transform" />-->
 
-    <fragment
-        android:id="@+id/nav_reflow"
-        android:name="com.example.nationalparks.ui.healthcheck.HealthCheckFragment"
-        android:label="@string/menu_healthcheck"
-        tools:layout="@layout/fragment_healthcheck" />
+<!--    <fragment-->
+<!--        android:id="@+id/nav_slideshow"-->
+<!--        android:name="com.example.nationalparks.ui.slideshow.SlideshowFragment"-->
+<!--        android:label="@string/menu_slideshow"-->
+<!--        tools:layout="@layout/fragment_slideshow" />-->
 
-    <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.example.nationalparks.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
-
-    <fragment
-        android:id="@+id/nav_settings"
-        android:name="com.example.nationalparks.ui.settings.SettingsFragment"
-        android:label="@string/menu_settings"
-        tools:layout="@layout/fragment_settings" />
+<!--    <fragment-->
+<!--        android:id="@+id/nav_settings"-->
+<!--        android:name="com.example.nationalparks.ui.settings.SettingsFragment"-->
+<!--        android:label="@string/menu_settings"-->
+<!--        tools:layout="@layout/fragment_settings" />-->
 </navigation>
