@@ -41,3 +41,29 @@
 
 ## Evaluate
 
+1. The application starts with creation of an instance of `NationalParksApplication` in which the `onCreate()` method initializes the Splunk Observability RUM module:
+
+   ```java
+     Config config = Config.builder()
+             .applicationName("National Parks")
+             .rumAccessToken(BuildConfig.RUM_ACCESS_TOKEN)
+             .realm(BuildConfig.RUM_REALM)
+             .deploymentEnvironment("development")
+             .debugEnabled(true)
+             .build();
+     SplunkRum.initialize(config, this);
+
+     SplunkRum sr = SplunkRum.getInstance();
+   ```
+
+   The `BuildConfig.RUM_ACCESS_TOKEN` and `BuildConfig.RUM_REALM` are provided by the configuration done on step 2 from the **Setup** section above.
+
+2. The app consists of two **Fragments**:
+
+   * `HealthCheckFragment`- calls the Health Check endpoint (`/api/v1/health-check`) to confirm it's up.  If so, the response `"API is up and running"` is returned from the Health Check endpoint and displayed in the center of the Fragment.
+   
+   ![Health Check Fragment](images/health-check.png)
+
+   * `NationalParksFragment`- calls the National Parks endpoint (`/api/v1/nationalparks`) to fetch a random set of National Parks.  Each time the Fragment displayed, a new random set will be retrieved.
+   
+   ![National Parks Fragment](images/national-parks.png)

@@ -1,5 +1,7 @@
 package com.example.nationalparks.ui.healthcheck;
 
+import android.util.Log;
+
 import androidx.annotation.NonNull;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
@@ -18,7 +20,7 @@ import okhttp3.Response;
 import okhttp3.ResponseBody;
 
 public class HealthCheckViewModel extends ViewModel {
-
+    private static final String LOG_TAG = "HealthCheckViewModel";
     private MutableLiveData<String> mText;
 
     public HealthCheckViewModel() {
@@ -38,7 +40,7 @@ public class HealthCheckViewModel extends ViewModel {
             public void onResponse(@NonNull Call call, @NonNull Response response) throws IOException {
                 ResponseBody responseBody = response.body();
                 String resStr = responseBody.string();
-                System.out.printf("response body: %s\n", resStr);
+                Log.d(LOG_TAG, String.format("Response Body: %s", resStr));
                 mText.postValue(resStr);
             }
         });

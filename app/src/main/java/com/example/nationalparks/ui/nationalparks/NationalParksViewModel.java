@@ -1,5 +1,7 @@
 package com.example.nationalparks.ui.nationalparks;
 
+import android.util.Log;
+
 import androidx.annotation.NonNull;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
@@ -23,6 +25,7 @@ import okhttp3.Response;
 import okhttp3.ResponseBody;
 
 public class NationalParksViewModel extends ViewModel {
+    private static final String LOG_TAG = "NationalParksViewModel";
     private final MutableLiveData<List<JSONObject>> mNationalParks;
 
     public NationalParksViewModel() {
@@ -46,7 +49,7 @@ public class NationalParksViewModel extends ViewModel {
             public void onResponse(@NonNull Call call, @NonNull Response response) throws IOException {
                 ResponseBody responseBody = response.body();
                 String resStr = responseBody.string();
-                System.out.printf("response body: %s\n", resStr);
+                Log.d(LOG_TAG, String.format("Response Body: %s", resStr));
                 parseJSONResponseRentBanner(resStr);
             }
         });
