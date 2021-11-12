@@ -8,7 +8,7 @@
    $ mkdir $HOME/.gradle
    ```
 
-2. Create the `.gradle/gradle.properties` file with the following content:
+2. Create the `$HOME/.gradle/gradle.properties` file with the following content:
   
    ```bash
    RUM_ACCESS_TOKEN=<token>
